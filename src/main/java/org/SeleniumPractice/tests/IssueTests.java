@@ -8,13 +8,17 @@ import org.SeleniumPractice.pages.LoginPage;
 import org.SeleniumPractice.utils.TestBase;
 import org.SeleniumPractice.utils.SoftAssertHelper;
 import org.SeleniumPractice.utils.TestDataProvider;
+import org.SeleniumPractice.utils.ConfigReader;
 
 public class IssueTests extends TestBase {
 
     @Test(dataProvider = "issueData", dataProviderClass = TestDataProvider.class)
     public void testIssueCreationWorkflow(String summary, String description) {
         LoginPage loginPage = new LoginPage();
-        loginPage.login("QA2", "TestPassword1");
+        loginPage.login(
+                ConfigReader.getProperty("valid.username"),
+                ConfigReader.getProperty("valid.password")
+        );
 
         DashboardPage dashboardPage = new DashboardPage();
         dashboardPage.clickIssuesLink();

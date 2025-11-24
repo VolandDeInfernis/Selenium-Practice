@@ -8,10 +8,15 @@ public class TestDataProvider {
 
     @DataProvider(name = "loginData", parallel = true)
     public Object[][] provideLoginData(Method method) {
+        String validUsername = ConfigReader.getProperty("valid.username");
+        String validPassword = ConfigReader.getProperty("valid.password");
+        String invalidUsername = ConfigReader.getProperty("invalid.username");
+        String invalidPassword = ConfigReader.getProperty("invalid.password");
+
         return new Object[][] {
-                {"QA2", "TestPassword1", "success"},
-                {"invalid-user", "TestPassword1", "failure"},
-                {"QA2","invalid-password", "failure"}
+                {validUsername, validPassword, "success"},
+                {invalidUsername, validPassword, "failure"},
+                {validUsername, invalidPassword, "failure"}
         };
     }
 

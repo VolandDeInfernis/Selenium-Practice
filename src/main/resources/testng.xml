@@ -6,6 +6,7 @@
             <class name="org.SeleniumPractice.tests.LoginTests"/>
             <class name="org.SeleniumPractice.tests.IssueTests"/>
             <class name="org.SeleniumPractice.tests.LogoutTests"/>
+            <class name="org.SeleniumPractice.tests.NavigationTests"/>
         </classes>
     </test>
 

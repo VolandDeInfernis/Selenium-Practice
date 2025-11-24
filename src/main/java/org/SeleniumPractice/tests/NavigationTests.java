@@ -5,13 +5,17 @@ import org.SeleniumPractice.pages.DashboardPage;
 import org.SeleniumPractice.pages.LoginPage;
 import org.SeleniumPractice.utils.TestBase;
 import org.SeleniumPractice.utils.SoftAssertHelper;
+import org.SeleniumPractice.utils.ConfigReader;
 
 public class NavigationTests extends TestBase {
 
     @Test
     public void testAllNavigationLinks() {
         LoginPage loginPage = new LoginPage();
-        loginPage.login("QA2", "TestPassword1");
+        loginPage.login(
+                ConfigReader.getProperty("valid.username"),
+                ConfigReader.getProperty("valid.password")
+        );
 
         DashboardPage dashboardPage = new DashboardPage();
 
