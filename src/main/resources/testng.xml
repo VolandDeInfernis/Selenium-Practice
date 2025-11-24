@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="FinalTestSuite" parallel="false">
+
+    <test name="All Tests">
+        <classes>
+            <class name="org.SeleniumPractice.tests.LoginTests"/>
+            <class name="org.SeleniumPractice.tests.IssueTests"/>
+            <class name="org.SeleniumPractice.tests.LogoutTests"/>
+        </classes>
+    </test>
+
+</suite>
