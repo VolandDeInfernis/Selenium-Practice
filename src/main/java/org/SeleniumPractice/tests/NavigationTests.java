@@ -35,7 +35,7 @@ public class NavigationTests extends TestBase {
         dashboardPage.verifyNavigationSuccess("projects");
 
         dashboardPage.clickKnowledgeBaseLink();
-        dashboardPage.verifyNavigationSuccess("articles");;
+        dashboardPage.verifyNavigationSuccess("articles");
 
         dashboardPage.clickGanttChartsLink();
         dashboardPage.verifyNavigationSuccess("gantt");
